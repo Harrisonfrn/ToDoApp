@@ -18,7 +18,7 @@ class ToDoListController extends AbstractController
     }
 
     /**
-     * @Route("/create", name="create_task", method={"POST"})
+     * @Route("/create", name="create_task", methods={"POST"})
      */
     public function create()
     {
@@ -26,10 +26,18 @@ class ToDoListController extends AbstractController
     }
 
     /**
-     * @Route("/switch-status", name="switch_status")
+     * @Route("/switch-status/{id}", name="switch_status")
      */
-    public function switchStatus()
+    public function switchStatus($id)
     {
-        exit('to do: switch status of the task!');
+        exit('to do: switch status of the task!' . $id);
+    }
+
+    /**
+     * @Route("/delete/{id}", name="delete_task")
+     */
+    public function delete($id)
+    {
+        exit('to do: delete a task with id of ' . $id);
     }
 }
