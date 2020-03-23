@@ -17,11 +17,19 @@ class ToDoListController extends AbstractController
         ]);
     }
 
-     /**
-     * @Route("/create", name="create_task")
+    /**
+     * @Route("/create", name="create_task", method={"POST"})
      */
     public function create()
     {
-        
+        exit('to do: create a new task!');
+    }
+
+    /**
+     * @Route("/switch-status", name="switch_status")
+     */
+    public function switchStatus()
+    {
+        exit('to do: switch status of the task!');
     }
 }
